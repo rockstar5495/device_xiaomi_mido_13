@@ -35,7 +35,7 @@ public final class FileUtils {
     }
 
     public static void setValue(String path, int value) {
-        if (fileWritable(path)) {
+        if (isFileWritable(path)) {
             if (path == null) {
                 return;
             }
@@ -50,8 +50,24 @@ public final class FileUtils {
         }
     }
 
+    public static void setValue(String path, boolean value) {
+        if (isFileWritable(path)) {
+            if (path == null) {
+                return;
+            }
+            try {
+                FileOutputStream fos = new FileOutputStream(new File(path));
+                fos.write((value ? "1" : "0").getBytes());
+                fos.flush();
+                fos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public static void setValue(String path, double value) {
-        if (fileWritable(path)) {
+        if (isFileWritable(path)) {
             if (path == null) {
                 return;
             }
@@ -67,7 +83,7 @@ public final class FileUtils {
     }
 
     public static void setValue(String path, String value) {
-        if (fileWritable(path)) {
+        if (isFileWritable(path)) {
             if (path == null) {
                 return;
             }

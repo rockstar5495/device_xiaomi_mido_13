@@ -15,6 +15,7 @@
 -->
 
 <resources>
+    <!-- Base attributes available to CustomSeekBarPreference. -->
     <declare-styleable name="CustomSeekBarPreference">
         <attr name="interval" format="integer" />
         <attr name="showSign" format="boolean" />
