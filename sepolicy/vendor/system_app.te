@@ -15,6 +15,7 @@ allow system_app {
     sysfs_hgain
     sysfs_mgain
     sysfs_sgain
+    sysfs_vibrator
 }:file rw_file_perms;
 
 allow system_app {

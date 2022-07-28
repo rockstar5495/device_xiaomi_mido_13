@@ -1,5 +1,9 @@
  on property:sys.boot_completed=1
 
+# Vibrator
+    chown system system /sys/module/qti_haptics/parameters/vmax_mv_override
+    chmod 0664 /sys/module/qti_haptics/parameters/vmax_mv_override
+   
 # Audio gain permissions
   chown system system /sys/kernel/sound_control/headphone_gain
   chown system system /sys/kernel/sound_control/mic_gain
