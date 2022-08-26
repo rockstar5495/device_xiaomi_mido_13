@@ -172,9 +172,6 @@ service ppd /vendor/bin/mm-pp-dpps
     socket pps stream 0660 system system
     disabled
 
-on property:persist.vendor.radio.port_index=""
-    setprop sys.usb.config adb
-
 service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
     class core
     user root
