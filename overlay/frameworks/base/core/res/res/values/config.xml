@@ -665,9 +665,6 @@
          etc. dialogs. -->
     <string name="config_appsNotReportingCrashes">com.google.android.tts</string>
 
-    <!-- Whether device supports increased touch sensitvity -->
-    <bool name="config_supportGloveMode">true</bool>
-
     <!-- Package name of a telephony-related system app, such as an IMS service.
          Exempted from privacy indicators. -->
     <string name="config_systemTelephonyPackage" translatable="false">com.qualcomm.qti.cne</string>
