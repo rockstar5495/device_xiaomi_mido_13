@@ -3,8 +3,4 @@ allow platform_app hal_alarm_qti_hwservice:hwservice_manager find;
 
 get_prop(platform_app, theme_prop)
 
-# FPS
-allow platform_app sysfs_fps:file { getattr open read };
-allow platform_app sysfs_graphics:dir search;
-
 allow platform_app vendor_default_prop:file { getattr  open };
