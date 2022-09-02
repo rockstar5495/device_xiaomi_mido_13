@@ -173,9 +173,6 @@ persist.sys.binary_xml=false
 # WFD
 persist.hwc.enable_vds=1
 
-# Zygote Preforking
-persist.device_config.runtime_native.usap_pool_enabled=true
-
 # Navbar
 qemu.hw.mainkeys=0
 
