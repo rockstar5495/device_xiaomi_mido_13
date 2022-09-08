@@ -190,9 +190,6 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
-# Neverallows
-SELINUX_IGNORE_NEVERALLOWS := true
-
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /vendor/lib64/hw/gxfingerprint.default.so|fakelogprint.so \
