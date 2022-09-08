@@ -157,11 +157,6 @@ on boot
     write /dev/stune/camera-daemon/schedtune.prefer_idle 1
     write /dev/stune/camera-daemon/schedtune.boost 0
 
-# Flashlight
-    chown root system /sys/class/leds/led:torch_1/max_brightness
-    chmod 0660 /sys/class/leds/led:torch_1/max_brightness
-    write /sys/class/leds/led:torch_1/max_brightness 0
-
 # access permission for wlan
     chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
 
