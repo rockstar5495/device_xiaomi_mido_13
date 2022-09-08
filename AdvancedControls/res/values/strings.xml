@@ -21,4 +21,8 @@
     <string name="yellow_torch_brightness_summary_head">Define the maximum brightness of the yellow led</string>
     <string name="white_torch_brightness_title_head">White led maximum brightness</string>
     <string name="white_torch_brightness_summary_head">Define the maximum brightness of the white led</string>
+    <string name="plus_one">+1</string>
+    <string name="minus_one">-1</string>
+    <string name="restore_default">Default</string>
+    <string name="restore_on_boot">Restore settings across app close/boot</string>
 </resources>
