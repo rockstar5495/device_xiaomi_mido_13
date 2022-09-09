@@ -20,3 +20,6 @@ type sysfs_sgain, sysfs_type, fs_type;
 
 # AdvancedControls
 type sysfs_torch, sysfs_type, fs_type;
+
+# Kcal
+type kcal_dev, sysfs_type, fs_type;
