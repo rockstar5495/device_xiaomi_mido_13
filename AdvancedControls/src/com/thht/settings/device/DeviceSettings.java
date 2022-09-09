@@ -39,6 +39,7 @@ public class DeviceSettings extends PreferenceActivity implements
 
     public static final String KEY_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
     public static final String KEY_WHITE_TORCH_BRIGHTNESS = "white_torch_brightness";
+    public static final String KEY_RESTORE_ON_BOOT = "restore_on_boot";
 
     private YellowTorchBrightnessPreference mYellowTorchBrightness;
     private WhiteTorchBrightnessPreference mWhiteTorchBrightness;

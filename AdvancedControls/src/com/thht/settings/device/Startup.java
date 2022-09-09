@@ -32,22 +32,20 @@ import android.util.Log;
 public class Startup extends BroadcastReceiver {
 
   private static final String TAG = "AdvancedControls";
-  
+
   @Override
     public void onReceive(final Context context, final Intent bootintent) {
-     
-        Boolean shouldRestore = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceSettings.KEY_RESTORE_ON_BOOT, false); 
-        Boolean shouldRestorePreset = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceSettings.KEY_KCAL_PRESETS, false); 
+
+        Boolean shouldRestore = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceSettings.KEY_RESTORE_ON_BOOT, false);
         Log.e(TAG, Boolean.toString(shouldRestore));
         if(bootintent.getAction().equals("android.intent.action.BOOT_COMPLETED") && shouldRestore) {
             new Handler().postDelayed(new Runnable() {
             @Override
               public void run() {
                 Intent in = new Intent(context, RestoreService.class);
-                in.putExtra(DeviceSettings.KEY_KCAL_PRESETS, shouldRestorePreset);
                 context.startService(in);
               }
            }, 0);
-        } 
+        }
     }
 }
