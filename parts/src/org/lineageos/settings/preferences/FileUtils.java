@@ -35,7 +35,7 @@ public final class FileUtils {
     }
 
     public static void setValue(String path, int value) {
-        if (isFileWritable(path)) {
+        if (fileWritable(path)) {
             if (path == null) {
                 return;
             }
@@ -51,7 +51,7 @@ public final class FileUtils {
     }
 
     public static void setValue(String path, boolean value) {
-        if (isFileWritable(path)) {
+        if (fileWritable(path)) {
             if (path == null) {
                 return;
             }
@@ -67,7 +67,7 @@ public final class FileUtils {
     }
 
     public static void setValue(String path, double value) {
-        if (isFileWritable(path)) {
+        if (fileWritable(path)) {
             if (path == null) {
                 return;
             }
@@ -83,7 +83,7 @@ public final class FileUtils {
     }
 
     public static void setValue(String path, String value) {
-        if (isFileWritable(path)) {
+        if (fileWritable(path)) {
             if (path == null) {
                 return;
             }

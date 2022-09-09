@@ -23,7 +23,6 @@ import android.content.Intent;
 import android.util.Log;
 import android.provider.Settings;
 
-import org.lineageos.settings.utils.FileUtils;
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.preferences.FileUtils;
@@ -35,20 +34,6 @@ public class BootCompletedReceiver extends BroadcastReceiver implements Controll
 
     @Override
     public void onReceive(final Context context, Intent intent) {
-        if (DozeUtils.isDozeEnabled(context) && DozeUtils.sensorsEnabled(context)) {
-            if (DEBUG) Log.d(TAG, "Starting Doze service");
-            DozeUtils.startService(context);
-        }
-        new DiracUtils(context).onBootCompleted();
-
-    int gain = Settings.Secure.getInt(context.getContentResolver(),
-                SoundControlSettings.PREF_HEADPHONE_GAIN, 4);
-        FileUtils.setValue(SoundControlSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
-        FileUtils.setValue(SoundControlSettings.MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
-                SoundControlSettings.PREF_MICROPHONE_GAIN, 0));
-        FileUtils.setValue(SoundControlSettings.SPEAKER_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
-                SoundControlSettings.PREF_SPEAKER_GAIN, 0));
-    }
 
         if (Settings.Secure.getInt(context.getContentResolver(), PREF_ENABLED, 0) == 1) {
             FileUtils.setValue(KCAL_ENABLE, Settings.Secure.getInt(context.getContentResolver(),
@@ -75,4 +60,20 @@ public class BootCompletedReceiver extends BroadcastReceiver implements Controll
             FileUtils.setValue(KCAL_HUE, Settings.Secure.getInt(context.getContentResolver(),
                     PREF_HUE, HUE_DEFAULT));
         }
+
+        if (DozeUtils.isDozeEnabled(context) && DozeUtils.sensorsEnabled(context)) {
+            if (DEBUG) Log.d(TAG, "Starting Doze service");
+            DozeUtils.startService(context);
+        }
+
+        new DiracUtils(context).onBootCompleted();
+
+    int gain = Settings.Secure.getInt(context.getContentResolver(),
+                SoundControlSettings.PREF_HEADPHONE_GAIN, 4);
+        FileUtils.setValue(SoundControlSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
+        FileUtils.setValue(SoundControlSettings.MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                SoundControlSettings.PREF_MICROPHONE_GAIN, 0));
+        FileUtils.setValue(SoundControlSettings.SPEAKER_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                SoundControlSettings.PREF_SPEAKER_GAIN, 0));
+    }
 }
