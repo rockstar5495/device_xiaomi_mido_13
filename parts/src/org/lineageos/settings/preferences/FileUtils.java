@@ -53,7 +53,7 @@ public final class FileUtils {
         }
     }
 
-    public static void setValue(String path, boolean value) {
+    public static void setValue(String path, Boolean value) {
         if (fileWritable(path)) {
             if (path == null) {
                 return;
@@ -99,6 +99,20 @@ public final class FileUtils {
                 e.printStackTrace();
             }
         }
+    }
+
+    static String getValue(String filename) {
+        if (filename == null) {
+            return null;
+        }
+        String line;
+        try (BufferedReader br = new BufferedReader(new FileReader(filename), 1024)) {
+            line = br.readLine();
+        } catch (IOException e) {
+            return null;
+        }
+        // ignore
+        return line;
     }
 
     /**
