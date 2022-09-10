@@ -17,9 +17,11 @@
 
 package org.lineageos.settings.preferences;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 
 public final class FileUtils {
