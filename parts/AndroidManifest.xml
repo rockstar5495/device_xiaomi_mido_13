@@ -122,7 +122,8 @@
 	 <activity
             android:name=".kcal.KcalSettingsActivity"
             android:exported="false"
-            android:label="@string/advanced_settings_kcal">
+            android:label="@string/advanced_settings_kcal"
+	    android:theme="@style/Theme.Main">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
