@@ -2,6 +2,9 @@
 # product.prop for mido
 #
 
+# Bluetooth
+bluetooth.hardware.power.operating_voltage_mv=3300
+
 # Default to BFQ I/O scheduler
 persist.sys.io.scheduler=bfq
 
