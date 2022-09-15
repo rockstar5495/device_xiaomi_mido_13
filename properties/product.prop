@@ -3,6 +3,7 @@
 #
 
 # Bluetooth
+bluetooth.device.default_name=Redmi Note 4
 bluetooth.hardware.power.operating_voltage_mv=3300
 
 # Bluetooth profiles
