@@ -160,7 +160,9 @@ PRODUCT_PACKAGES += \
     camera.msm8953 \
     libcamshim \
     libmm-qcamera \
-    GCam
+    GCam \
+    libstdc++ \
+    libstdc++.vendor
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor
