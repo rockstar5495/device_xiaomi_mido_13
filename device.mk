@@ -87,8 +87,7 @@ PRODUCT_COPY_FILES += \
 
 # ANT
 PRODUCT_PACKAGES += \
-    AntHalService \
-    libantradio
+    AntHalService
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -159,10 +158,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0 \
     camera.msm8953 \
     libcamshim \
-    libmm-qcamera \
     GCam \
     libstdc++ \
-    libstdc++.vendor
+    libstdc++.vendor \
+    libui_shim
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor
@@ -204,7 +203,6 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
     memtrack.msm8953 \
     vendor.display.config@1.0.vendor \
-    vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.mapper@2.0.vendor
 
 # Device-specific settings
@@ -246,8 +244,7 @@ PRODUCT_PACKAGES += \
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
-    android.hardware.gatekeeper@1.0-service \
-    android.hardware.gatekeeper@1.0-service.vendor
+    android.hardware.gatekeeper@1.0-service
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -308,9 +305,13 @@ PRODUCT_PACKAGES += \
 # Keymaster HAL
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl:64 \
+<<<<<<< HEAD
     android.hardware.keymaster@3.0-service \
     android.hardware.keymaster@4.1.vendor \
     android.hardware.keymaster@3.0-service.vendor
+=======
+    android.hardware.keymaster@3.0-service
+>>>>>>> 77fb5e3e (mido: Remove no-op/dead targets)
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -354,7 +355,6 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
-    libOmxSwVencHevc \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw \
@@ -420,10 +420,13 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.2.vendor \
+<<<<<<< HEAD
     extphonelib \
     extphonelib.xml \
     extphonelib-product \
     extphonelib_product.xml \
+=======
+>>>>>>> 77fb5e3e (mido: Remove no-op/dead targets)
     librmnetctl \
     libcnefeatureconfig \
     qti-telephony-hidl-wrapper \
