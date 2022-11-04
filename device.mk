@@ -450,6 +450,9 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service \
     android.frameworks.sensorservice@1.0.vendor \
     libsensorndkbridge
+    
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # Thermal
 PRODUCT_COPY_FILES += \
