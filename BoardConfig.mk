@@ -161,7 +161,6 @@ PRODUCT_USES_QCOM_HARDWARE := true
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 TARGET_USES_INTERACTION_BOOST := true
 
 # Qualcomm
