@@ -304,13 +304,9 @@ PRODUCT_PACKAGES += \
 # Keymaster HAL
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl:64 \
-<<<<<<< HEAD
     android.hardware.keymaster@3.0-service \
     android.hardware.keymaster@4.1.vendor \
     android.hardware.keymaster@3.0-service.vendor
-=======
-    android.hardware.keymaster@3.0-service
->>>>>>> 77fb5e3e (mido: Remove no-op/dead targets)
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -419,13 +415,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.2.vendor \
-<<<<<<< HEAD
     extphonelib \
     extphonelib.xml \
     extphonelib-product \
     extphonelib_product.xml \
-=======
->>>>>>> 77fb5e3e (mido: Remove no-op/dead targets)
     librmnetctl \
     libcnefeatureconfig \
     qti-telephony-hidl-wrapper \
