@@ -121,7 +121,7 @@ persist.dbg.ims_volte_enable=1
 
 # SOC
 ro.soc.manufacturer=Qualcomm
-ro.soc.model=SDM450
+ro.soc.model=SD625
 
 # SurfaceFlinger
 ro.surface_flinger.set_idle_timer_ms=58
