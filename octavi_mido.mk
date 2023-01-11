@@ -34,6 +34,7 @@ OCTAVI_MAINTAINER := Pratyaksh.Bharadwaj
 # Misc
 TARGET_GAPPS_ARCH := arm64
 TARGET_SCREEN_DENSITY := 400
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
